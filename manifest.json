@@ -1,4 +1,6 @@
 {
+  "_note": "OPTIONAL"
+  
   "name": "Flappy Bird Clone",
   "short_name": "Flappy",
   "start_url": "index.html",
