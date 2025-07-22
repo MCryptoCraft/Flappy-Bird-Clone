@@ -1,0 +1,10 @@
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# node_modules if used
+node_modules/
+
+# Optional cache or IDE files
+*.log
+.vscode/

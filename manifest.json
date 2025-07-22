@@ -1,0 +1,15 @@
+{
+  "name": "Flappy Bird Clone",
+  "short_name": "Flappy",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#87ceeb",
+  "theme_color": "#87ceeb",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}
