@@ -1,1 +1,9 @@
+To deploy to GitHub Pages:
 
+1. Push code to a public repository
+2. Go to repo Settings > Pages
+3. Set source to \"main\" branch and / (root)
+4. Wait a few minutes, your game is live!
+
+Access URL: https://yourusername.github.io/repo-name/
+ j
