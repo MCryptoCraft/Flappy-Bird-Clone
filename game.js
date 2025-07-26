@@ -32,7 +32,7 @@ function updatePipes() {
   if (frame % 100 === 0) {
     let top = Math.random() * 200 + 50;
     let bottom = 600 - top - 150;
-    pipes.push({ x: 400, width: 50, top, bottom });
+    pipes.push({ x: 400, width: 50, top, bottom, passed: false });
   }
 
   pipes.forEach(pipe => pipe.x -= 2);
@@ -69,7 +69,13 @@ function update() {
   updatePipes();
   checkCollision();
 
-  score++;
+  // Score only increases when bird passes a pipe
+  pipes.forEach(pipe => {
+    if (!pipe.passed && pipe.x + pipe.width < bird.x) {
+      score++;
+      pipe.passed = true;
+    }
+  });
 }
 
 function draw() {
@@ -79,7 +85,7 @@ function draw() {
 
   ctx.fillStyle = 'black';
   ctx.font = '20px Arial';
-  ctx.fillText(`Score: ${Math.floor(score / 10)}`, 10, 30);
+  ctx.fillText(`Score: ${score}`, 10, 30);
 }
 
 function gameLoop() {
